@@ -21,7 +21,7 @@ public class Human {
     }
 
     /*
-    *   Returns string representation of this class
+    *   Returns string representation of this class object
     *
     *   Parameters: no
     *
