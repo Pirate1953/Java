@@ -9,7 +9,7 @@ public class DogKennel {
     *   Constructor initializes class properties, creates list of Dog class objects
     *
     *   Parameters:
-    *   capacity - array size
+    *   capacity - list size
     *
     */
     public DogKennel(int capacity) {
