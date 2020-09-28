@@ -20,6 +20,10 @@ public abstract class Shape {
         this.color = color;
     }
 
+    public void setFilled(boolean filled) {
+        this.filled = filled;
+    }
+
     abstract double getArea();
     abstract double getPerimeter();
 
