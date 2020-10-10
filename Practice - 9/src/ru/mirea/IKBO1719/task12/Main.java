@@ -1,6 +1,16 @@
 package ru.mirea.IKBO1719.task12;
 
+/*
+ *   A legacy programmatic interface for the Java Programming Language compiler
+ */
 public class Main {
+
+    /*
+     *   Main entry point for the launcher
+     *
+     *   @param args                 command line arguments
+     *   @return                     void
+     */
     public static void main(String[] args) {
         Company company = new Company();
         company.doSomething(new HandleEmployee() { //Anonymous
