@@ -1,5 +1,8 @@
 package ru.mirea.IKBO1719.task12;
 
+/**
+ *   Overrides employee handling method, implements HandleEmployee interface
+ */
 public class DoSomethings implements HandleEmployee {
 
     /**
