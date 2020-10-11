@@ -2,7 +2,7 @@ package ru.mirea.IKBO1719.task12;
 
 import java.time.LocalDate;
 
-/*
+/**
 *   Describes and controls employee
 */
 public class Employee {
@@ -13,7 +13,7 @@ public class Employee {
     private long phoneNumber;
     private double Salary;
 
-    /*
+    /**
     *   Constructs employee, sets his name, second name, date of birth, registration place, phone number and salary
     *
     *   @param Name                 name to set
@@ -33,47 +33,43 @@ public class Employee {
 
     }
 
-    /*
-    *   Sets name to employee
-    *
-    *   @param Name                 name to set
-    *   @return                     void
-    */
+    /**
+     *   Sets name to employee
+     *
+     *   @param Name                 name to set
+     */
     public void setName(String Name) {
         this.Name = Name;
     }
 
-    /*
+    /**
      *   Sets second name to employee
      *
      *   @param secondName           second name to set
-     *   @return                     void
      */
     public void setSecondName(String secondName) {
         this.secondName = secondName;
     }
 
-    /*
+    /**
      *   Sets phone number to employee
      *
      *   @param phoneNumber          phone number to set
-     *   @return                     void
      */
     public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    /*
+    /**
      *   Sets employee salary
      *
      *   @param Salary               salary to set
-     *   @return                     void
      */
     public void setSalary(double Salary) {
         this.Salary = Salary;
     }
 
-    /*
+    /**
      *   Returns employee name
      *
      *   @return                     employee name
@@ -82,7 +78,7 @@ public class Employee {
         return Name;
     }
 
-    /*
+    /**
      *   Returns employee second name
      *
      *   @return                     employee second name
@@ -91,7 +87,7 @@ public class Employee {
         return secondName;
     }
 
-    /*
+    /**
      *   Returns employee date of birth
      *
      *   @return                     employee date of birth
@@ -100,7 +96,7 @@ public class Employee {
         return birthDate;
     }
 
-    /*
+    /**
      *   Returns employee registration place
      *
      *   @return                     employee registration place
@@ -109,7 +105,7 @@ public class Employee {
         return regPlace;
     }
 
-    /*
+    /**
      *   Returns employee phone number
      *
      *   @return                     employee phone number
@@ -118,7 +114,7 @@ public class Employee {
         return phoneNumber;
     }
 
-    /*
+    /**
      *   Returns employee salary
      *
      *   @return                     employee salary
