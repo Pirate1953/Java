@@ -9,7 +9,7 @@ public class Main {
                 System.out.println(employee.getBirthDate());
             }
         });
-        company.doSomething(employee -> employee.setPhoneNumber(89123422999L));
+        company.doSomething(employee -> employee.setSecondName("Yakovlev"));
         DoSomethings handle = new DoSomethings();
         company.doSomething(handle);
     }
