@@ -55,7 +55,7 @@ public class Main {
 
                 case "DELETE": {
                     if (findSpacebars(command) > 0) {
-                        String number = command.substring(7); //Returns substring between first and second space symbols (where number is)
+                        String number = command.substring(7);
                         if (Character.isDigit(number.charAt(0))) { //Determines if symbol at the specified position in the argument string is digit
                             dealsList.remove(Integer.parseInt(number));
                             break;
