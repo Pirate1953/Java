@@ -24,7 +24,12 @@ public class Main {
                     if (findSpacebars(command) > 1 && findSpacebars(command) > 0) {
                         String number = command.substring(4, command.indexOf(' ', 4)); //Returns substring between first and second space symbols (where number is)
                         if (Character.isDigit(number.charAt(0))) { //Determines if symbol at the specified position in the argument string is digit
-                            addElementAtSpecifiedPos(dealsList, Integer.parseInt(number), command.substring(5 + number.length()));
+                            try {
+                                addElementAtSpecifiedPos(dealsList, Integer.parseInt(number), command.substring(5 + number.length()));
+                            }
+                            catch (IndexOutOfBoundsException ex) {
+                                System.out.println("Порядковый номер не должен быть больше предыдущего на 2 и более значений");
+                            }
                             break;
                         }
                     }

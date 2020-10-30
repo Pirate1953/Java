@@ -24,10 +24,12 @@ public class Main2 {
                         String email = command.substring(4); //Returns substring between first and space symbols and the end of the string (where email is)
                         if (!isValidEmail(email)) {
                             emailList.add(email);
-                            break;
+                        } else {
+                            System.out.println("Email не валидный");
                         }
+                        break;
                     }
-                    else {
+                    if (findSpacebars(command) != 1) {
                         System.out.println("Синтаксис команды: ADD <#email>");
                         break;
                     }
@@ -61,7 +63,7 @@ public class Main2 {
     /**
      * Prints all elements from the specified set
      *
-     * @param deals list containing elements to be printed
+     * @param deals set containing elements to be printed
      */
     static void list(TreeSet<String> deals) {
         System.out.println(deals);
