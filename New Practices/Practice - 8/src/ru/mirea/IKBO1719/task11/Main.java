@@ -28,7 +28,7 @@ public class Main {
                                 addElementAtSpecifiedPos(dealsList, Integer.parseInt(number), command.substring(5 + number.length()));
                             }
                             catch (IndexOutOfBoundsException ex) {
-                                System.out.println("Порядковый номер не должен быть больше предыдущего на 2 и более значений");
+                                System.out.println("Порядковый номер не должен быть больше/меньше предыдущего/следующего на 2 и более значений");
                             }
                             break;
                         }
