@@ -38,11 +38,11 @@ public class Main2 {
         Pattern pattern;
         Matcher matcher;
         try {
-            pattern = Pattern.compile("([А-ЯЁ])[а-яё]+ ([А-ЯЁ])[а-яё]+ ([А-ЯЁ])[а-яё]+"); //second name; name; patronymic
+            pattern = Pattern.compile("\\p{Lu}\\p{Ll}+(?:-\\p{Lu}\\p{Ll}+)* \\p{Lu}\\p{Ll}+ \\p{Lu}\\p{Ll}+"); //second name; name; patronymic
             matcher = pattern.matcher(fio);
             if (matcher.matches()) return 1;
 
-            pattern = Pattern.compile("([А-ЯЁ])[а-яё]+ ([А-ЯЁ])[а-яё]+"); //second name; name
+            pattern = Pattern.compile("\\p{Lu}\\p{Ll}+(?:-\\p{Lu}\\p{Ll}+)* \\p{Lu}\\p{Ll}+"); //second name; name
             matcher = pattern.matcher(fio);
             if (matcher.matches()) return 2;
 
