@@ -77,24 +77,28 @@ public class Main2 {
     static boolean isValidEmail(String email) {
         boolean isValid = true;
         int index_of_char = 0;
-        if (email.contains("@") && email.contains(".")) {
-            if (email.charAt(0) != '@' && email.charAt(0) != '.') {
-                for (int i = 0; i < email.length(); i++) {
-                    if (email.charAt(i) == ' ') {
-                        index_of_char = i;
-                        break;
-                    }
-                }
-                String substring = email.substring(index_of_char);
-                if (substring.contains(".ru") || substring.contains(".com") || substring.contains(".org")) {
-                    for (char c : email.toCharArray()) {
-                        if (!(c >= 'a' && c <= 'z') && !(c >= 'A' && c <= 'Z')) { //Determines if each character in the string in english
-                            isValid = false;
+        try {
+            if (email.contains("@") && email.contains(".")) {
+                if (email.charAt(0) != '@' && email.charAt(0) != '.') {
+                    for (int i = 0; i < email.length(); i++) {
+                        if (email.charAt(i) == ' ') {
+                            index_of_char = i;
                             break;
+                        }
+                    }
+                    String substring = email.substring(index_of_char);
+                    if (substring.contains(".ru") || substring.contains(".com") || substring.contains(".org")) {
+                        for (char c : email.toCharArray()) {
+                            if (!(c >= 'a' && c <= 'z') && !(c >= 'A' && c <= 'Z')) { //Determines if each character in the string in english
+                                isValid = false;
+                                break;
+                            }
                         }
                     }
                 }
             }
+        } catch (Exception ex) {
+            System.out.println("В методе isValidEmail класса Main2\n" + ex.getMessage());
         }
         return isValid;
     }
